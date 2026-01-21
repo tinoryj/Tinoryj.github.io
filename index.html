@@ -13,6 +13,18 @@
 	<link rel="stylesheet" href="css/animate.css" />
 	<link rel="stylesheet" href="css/font-awesome.min.css" />
 	<script src="js/vendor/modernizr.js"></script>
+	<style>
+		#lang-toggle {
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+		#lang-toggle:hover {
+			background-color: rgba(255, 255, 255, 0.1);
+		}
+		#lang-toggle i {
+			margin-right: 3px;
+		}
+	</style>
 </head>
 <body>
 <script>
@@ -32,10 +44,10 @@
 		<div class="row top-box animated fadeIn">
 	<div class="medium-9 columns">
 		<h3>
-			<strong>REN, Yanjing</strong>
+			<strong data-en="REN, Yanjing" data-zh="任彦璟">REN, Yanjing</strong>
 		</h3>
-		<h5>PhD student at CUHK</h5>
-		<h6 class="show-for-medium-up">
+		<h5 data-en="PhD student at CUHK" data-zh="香港中文大学博士生">PhD student at CUHK</h5>
+		<h6 class="show-for-medium-up" data-en="CUHK, HK, China" data-zh="香港中文大学，中国香港">
 			CUHK, HK, China
 		</h6>
 		<div class="show-for-medium-up">
@@ -59,25 +71,34 @@
 
 <div class="row middle-box animated fadeIn">
 	<ul class="tabs" data-tab role="tablist">
-		<li class="tab-title active"><a href="#biography">Biography</a></li>
-		<li class="tab-title"><a href="#publication">Publication</a></li>
-		<li class="tab-title"><a href="#teaching">Teaching</a></li>
-		<li class="tab-title"><a href="#software">Software</a></li>
-		<li class="tab-title"><a href="#honor">Honors</a></li>
-		<li class="tab-title"><a href="#internship">Internships</a></li>
-		<li class="tab-title right"><a href="#about">About</a></li>
+		<li class="tab-title active"><a href="#biography" data-en="Biography" data-zh="个人简介">Biography</a></li>
+		<li class="tab-title"><a href="#publication" data-en="Publication" data-zh="学术论文">Publication</a></li>
+		<li class="tab-title"><a href="#teaching" data-en="Teaching" data-zh="教学经历">Teaching</a></li>
+		<li class="tab-title"><a href="#software" data-en="Software" data-zh="开源软件">Software</a></li>
+		<li class="tab-title"><a href="#honor" data-en="Honors" data-zh="荣誉奖项">Honors</a></li>
+		<li class="tab-title"><a href="#internship" data-en="Works" data-zh="工作经历">Works</a></li>
+		<li class="tab-title right"><a href="#about" data-en="About" data-zh="关于">About</a></li>
+		<li class="tab-title right">
+			<a href="#" id="lang-toggle">
+				<i class="fa fa-language"></i> <span id="lang-text" data-en="中文" data-zh="English">中文</span>
+			</a>
+		</li>
 	</ul>
 </div>
 		<div class="row bottom-box animated tabs-content">
 
 			<div class="content active animated fadeIn" id="biography">
-	<h3>Biography</h3>
-    <p>Yanjing Ren is a PhD student in the <a href="http://www.cse.cuhk.edu.hk" target="_blank">Department of Computer Science and Engineering</a> at <a href="http://www.cuhk.edu.hk" target="_blank">the Chinese University of Hong Kong (CUHK)</a>, under the supervision of <a href="http://www.cse.cuhk.edu.hk/~pclee" target="_blank">Prof. Patrick P. C. Lee</a>. He is also a member of the <a href="http://adslab.cse.cuhk.edu.hk" target="_black">Applied Distributed Systems Lab (ADSLab)</a> at CUHK. Before that, He received his M.S degree in Computer Science and Engineering from <a href="https://en.uestc.edu.cn/" target="_blank">University of Electronic Science and Technology of China (UESTC)</a> in 2022, where he worked with Prof. Jingwei Li at the Network Security Technology Lab (NTSL), which Prof. Xiaosong Zhang leads. In addition, He received his Bachelor's degree in Information Security from <a href="https://en.uestc.edu.cn/" target="_blank">University of Electronic Science and Technology of China (UESTC)</a> in 2019.
+	<h3 data-en="Biography" data-zh="个人简介">Biography</h3>
+	<p class="lang-en">
+	Yanjing Ren is a PhD student in the <a href="http://www.cse.cuhk.edu.hk" target="_blank">Department of Computer Science and Engineering</a> at <a href="http://www.cuhk.edu.hk" target="_blank">the Chinese University of Hong Kong (CUHK)</a>, under the supervision of <a href="http://www.cse.cuhk.edu.hk/~pclee" target="_blank">Prof. Patrick P. C. Lee</a>. He is also a member of the <a href="http://adslab.cse.cuhk.edu.hk" target="_black">Applied Distributed Systems Lab (ADSLab)</a> at CUHK. Before that, He received his M.S degree in Computer Science and Engineering from <a href="https://en.uestc.edu.cn/" target="_blank">University of Electronic Science and Technology of China (UESTC)</a> in 2022, where he worked with <a href="https://jingwei87.github.io/" target="_blank">Prof. Jingwei Li</a> at the Network Security Technology Lab (NTSL), which Prof. Xiaosong Zhang leads. In addition, He received his Bachelor's degree in Information Security from <a href="https://en.uestc.edu.cn/" target="_blank">University of Electronic Science and Technology of China (UESTC)</a> in 2019.
+	</p>
+	<p class="lang-zh" style="display:none;">
+	任彦璟是<a href="http://www.cuhk.edu.hk" target="_blank">香港中文大学</a><a href="http://www.cse.cuhk.edu.hk" target="_blank">计算机科学与工程系</a>博士研究生，师从<a href="http://www.cse.cuhk.edu.hk/~pclee" target="_blank">李柏晴教授（Prof. Patrick P. C. Lee）</a>。他同时也是香港中文大学<a href="http://adslab.cse.cuhk.edu.hk" target="_black">应用分布式系统实验室（ADSLab）</a>的成员。在此之前，他于2022年在<a href="https://en.uestc.edu.cn/" target="_blank">电子科技大学</a>获得计算机科学与工程硕士学位，师从<a href="https://www.math-engineering.uestc.edu.cn/lijingwei/zh_CN/index.htm" target="_blank">李经纬教授</a>，所在实验室为由张小松教授领导的网络安全技术实验室（NTSL）。此外，他于2019年在<a href="https://en.uestc.edu.cn/" target="_blank">电子科技大学</a>获得信息安全学士学位。
 	</p>
 </div>
 
 <div class="content animated fadeIn" id="publication">
-	<h3>Conference Papers</h3>
+	<h3 data-en="Conference Papers" data-zh="会议论文">Conference Papers</h3>
 	<ul class="bullet">
 		<li>
 			<strong><font color=#0099ff>
@@ -166,7 +187,7 @@
 			(AR: 21/71 = 29.6%) <br />
 		</li><br />
 	</ul>
-	<h3>Journal Papers</h3>
+	<h3 data-en="Journal Papers" data-zh="期刊论文">Journal Papers</h3>
 	<ul class="bullet">
 		<li>
 			<strong><font color=#97250c>
@@ -185,7 +206,7 @@
 			(An earlier version appeared in MSST 2019) <br />
 		</li><br />
 	</ul>
-	<h3>Patents</h3>
+	<h3 data-en="Patents" data-zh="专利">Patents</h3>
 	<ul class="bullet">
 		<li>
 			<strong><font color=#009900>
@@ -219,30 +240,30 @@
 </div>
 
 <div class="content animated fadeIn" id="teaching">
-	<h3>Teaching in CUHK</h3>
+	<h3 data-en="Teaching in CUHK" data-zh="香港中文大学教学经历">Teaching in CUHK</h3>
 	<ul class="no-bullet">
 		<li>
-			<strong>Teaching Assistant</strong>
-			<span class="label right">Spring 2025</span><br />
+			<strong data-en="Teaching Assistant" data-zh="助教">Teaching Assistant</strong>
+			<span class="label right" data-en="Spring 2025" data-zh="2025年春季">Spring 2025</span><br />
 			AIST 3020: Introduction to Computer Systems
 			<br />
-			<em>Instructor:</em> <a href="http://www.cse.cuhk.edu.hk/~pclee" target="_blank"> Prof. Patrick P. C. Lee</a>
+			<em data-en="Instructor:" data-zh="授课教师：">Instructor:</em> <a href="http://www.cse.cuhk.edu.hk/~pclee" target="_blank"> Prof. Patrick P. C. Lee</a>
 			<br />
 		</li>
 		<li>
-			<strong>Teaching Assistant</strong>
-			<span class="label right">Fall 2022, Fall 2023</span><br />
+			<strong data-en="Teaching Assistant" data-zh="助教">Teaching Assistant</strong>
+			<span class="label right" data-en="Fall 2022, Fall 2023" data-zh="2022年秋季，2023年秋季">Fall 2022, Fall 2023</span><br />
 			CSCI 4180/ESTR 4106: Introduction to Cloud Computing and Storage
 			<br />
-			<em>Instructor:</em> <a href="http://www.cse.cuhk.edu.hk/~pclee" target="_blank"> Prof. Patrick P. C. Lee</a>
+			<em data-en="Instructor:" data-zh="授课教师：">Instructor:</em> <a href="http://www.cse.cuhk.edu.hk/~pclee" target="_blank"> Prof. Patrick P. C. Lee</a>
 			<br />
 		</li>
 		<li>
-			<strong>Teaching Assistant</strong>
-			<span class="label right">Spring 2023</span><br />
+			<strong data-en="Teaching Assistant" data-zh="助教">Teaching Assistant</strong>
+			<span class="label right" data-en="Spring 2023" data-zh="2023年春季">Spring 2023</span><br />
 			CSCI 3180: Principles of Programming Languages
 			<br />
-			<em>Instructor:</em> <a href="http://www.cse.cuhk.edu.hk/~wallace/" target="_blank"> Prof. Wallace, Wai-Ho Mak</a>
+			<em data-en="Instructor:" data-zh="授课教师：">Instructor:</em> <a href="http://www.cse.cuhk.edu.hk/~wallace/" target="_blank"> Prof. Wallace, Wai-Ho Mak</a>
 			<br />
 		</li>
 	</ul>
@@ -251,16 +272,16 @@
 <div class="content animated fadeIn" id="internship">
 	<ul class="no-bullet">
 		<li>
-			<strong>Alibaba Cloud</strong>
-			<span class="label right">June-December 2025</span><br />
-			R&D Engineer C/C++
+			<strong data-en="Alibaba Cloud" data-zh="阿里云智能集团">Alibaba Cloud</strong>
+			<span class="label right" data-en="June-December 2025" data-zh="2025年6月-12月">June-December 2025</span><br />
+			<span class="lang-content" data-en="Intern R&D Engineer C/C++" data-zh="实习C/C++研发工程师">Intern R&D Engineer C/C++</span>
 			<br />
 		</li>
 	</ul>
 </div>
 
 <div class="content animated fadeIn" id="software">
-	<h3>Open Source Softwares/Research Prototypes</h3>
+	<h3 data-en="Open Source Softwares/Research Prototypes" data-zh="开源软件/研究原型">Open Source Softwares/Research Prototypes</h3>
 	<ul class="bullet">
 		<li>
 			<strong>
@@ -315,75 +336,75 @@
 </div>
 
 <div class="content animated fadeIn" id="honor">
-	<h3>Honors & Awards</h3>
+	<h3 data-en="Honors & Awards" data-zh="荣誉与奖项">Honors & Awards</h3>
 	<ul class="bullet">
 		<li>
-		ACM Chengdu Chapter: Outstanding Graduate Paper Award
+		<span class="lang-content" data-en="ACM Chengdu Chapter: Outstanding Graduate Paper Award" data-zh="ACM成都分会：优秀研究生论文奖">ACM Chengdu Chapter: Outstanding Graduate Paper Award</span>
 		<span class="label right">2023</span>
 		</li>
 		<li>
-		CUHK Postgraduate Studentship
+		<span class="lang-content" data-en="CUHK Postgraduate Studentship" data-zh="香港中文大学研究生奖学金">CUHK Postgraduate Studentship</span>
 		<span class="label right">2022 - Now</span>
 		</li>
 		<li>
-		Outstanding Master's Thesis of UESTC
+		<span class="lang-content" data-en="Outstanding Master's Thesis of UESTC" data-zh="电子科技大学优秀硕士论文">Outstanding Master's Thesis of UESTC</span>
 		<span class="label right">2022</span>
 		</li>
 		<li>
-		Outstanding University Graduates of Sichuan Province
+		<span class="lang-content" data-en="Outstanding University Graduates of Sichuan Province" data-zh="四川省优秀大学毕业生">Outstanding University Graduates of Sichuan Province</span>
 		<span class="label right">2022</span>
 		</li>
 		<li>
-		Longhu - UESTC scholarship
+		<span class="lang-content" data-en="Longhu - UESTC scholarship" data-zh="龙湖-电子科技大学奖学金">Longhu - UESTC scholarship</span>
 		<span class="label right">2022</span>
 		</li>
 		<li>
-		China Electronics Technology Group Corporation Limited - UESTC scholarship
+		<span class="lang-content" data-en="China Electronics Technology Group Corporation Limited - UESTC scholarship" data-zh="中国电子科技集团-电子科技大学奖学金">China Electronics Technology Group Corporation Limited - UESTC scholarship</span>
 		<span class="label right">2021</span>
 		</li>
 		<li>
-		Third Award (National Finals) of Integrated Circuit Innovation and Entrepreneurship Competition
+		<span class="lang-content" data-en="Third Award (National Finals) of Integrated Circuit Innovation and Entrepreneurship Competition" data-zh="全国集成电路创新创业大赛总决赛三等奖">Third Award (National Finals) of Integrated Circuit Innovation and Entrepreneurship Competition</span>
 		<span class="label right">2020</span>
 		</li>
 		<li>
-		First-class scholarship for master's studies (UESTC)
+		<span class="lang-content" data-en="First-class scholarship for master's studies (UESTC)" data-zh="硕士生学业一等奖学金（电子科技大学）">First-class scholarship for master's studies (UESTC)</span>
 		<span class="label right">2019, 2020, 2021</span>
 		</li>
 		<li>
-		Excellent graduation thesis of UESTC
+		<span class="lang-content" data-en="Excellent graduation thesis of UESTC" data-zh="电子科技大学优秀毕业论文">Excellent graduation thesis of UESTC</span>
 		<span class="label right">2019</span>
 		</li>
 		<li>
-		Outstanding Graduates of UESTC
+		<span class="lang-content" data-en="Outstanding Graduates of UESTC" data-zh="电子科技大学优秀毕业生">Outstanding Graduates of UESTC</span>
 		<span class="label right">2019</span>
 		</li>
 		<li>
-		Second Prize in ASC Student Supercomputer Challenge
+		<span class="lang-content" data-en="Second Prize in ASC Student Supercomputer Challenge" data-zh="亚洲大学生超级计算机竞赛（ASC）二等奖">Second Prize in ASC Student Supercomputer Challenge</span>
 		<span class="label right">2019</span>
 		</li>
 		<li>
-		Second Prize in ASC Student Supercomputer Challenge
+		<span class="lang-content" data-en="Second Prize in ASC Student Supercomputer Challenge" data-zh="亚洲大学生超级计算机竞赛（ASC）二等奖">Second Prize in ASC Student Supercomputer Challenge</span>
 		<span class="label right">2018</span>
 		</li>
 		<li>
-		Meritorious Winner of Mathematical Contest in Modeling (MCM)
+		<span class="lang-content" data-en="Meritorious Winner of Mathematical Contest in Modeling (MCM)" data-zh="美国大学生数学建模竞赛一等奖">Meritorious Winner of Mathematical Contest in Modeling (MCM)</span>
 		<span class="label right">2017</span>
 		</li>
 		<li>
-		First Prize of China Undergraduate Mathematical Contest in Modeling (CUMCM), Sichuan Division
+		<span class="lang-content" data-en="First Prize of China Undergraduate Mathematical Contest in Modeling (CUMCM), Sichuan Division" data-zh="全国大学生数学建模竞赛（四川赛区）一等奖">First Prize of China Undergraduate Mathematical Contest in Modeling (CUMCM), Sichuan Division</span>
 		<span class="label right">2017</span>
 		</li>
 	</ul>
 </div>
 <div class="content animated fadeIn" id="about">
-	<h3>About this page</h3>
-	<p>This page is created with <a href="http://foundation.zurb.com/" target="_blank">Foundation</a>.</p>
-	<span class="label alert round">Privacy warning:</span> This page has installed the tracking script from Google Analytics. Click <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">here</a> to learn how to opt out.
+	<h3 data-en="About this page" data-zh="关于本页面">About this page</h3>
+	<p class="lang-content" data-en="This page is created with Foundation." data-zh="本页面使用 Foundation 创建。">This page is created with <a href="http://foundation.zurb.com/" target="_blank">Foundation</a>.</p>
+	<span class="label alert round" data-en="Privacy warning:" data-zh="隐私警告：">Privacy warning:</span> <span class="lang-content" data-en="This page has installed the tracking script from Google Analytics. Click here to learn how to opt out." data-zh="本页面已安装 Google Analytics 追踪脚本。点击此处了解如何退出追踪。">This page has installed the tracking script from Google Analytics. Click <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" data-en="here" data-zh="此处">here</a> to learn how to opt out.</span>
 	<br /><br />
 </div>
 		</div>
 		<div class="text-center">
-			<span class="footer">Last modified: September, 2022</span>
+			<span class="footer" data-en="Last modified: January 21th, 2026" data-zh="最后更新：2026年1月21日"></span>
 		</div>
 	</div>
 </div>
@@ -400,6 +421,51 @@
 			}
 		}
 	} );
+
+	// 语言切换功能
+	var currentLang = localStorage.getItem('language') || 'en';
+	
+	function switchLanguage(lang) {
+		currentLang = lang;
+		localStorage.setItem('language', lang);
+		
+		// 切换所有带data-en和data-zh属性的元素
+		$('[data-en][data-zh]').each(function() {
+			var $elem = $(this);
+			var text = lang === 'en' ? $elem.attr('data-en') : $elem.attr('data-zh');
+			
+			// 对于包含HTML链接的内容，需要特殊处理
+			if ($elem.hasClass('lang-content')) {
+				// 保留链接结构，只替换文本
+				if (lang === 'zh') {
+					$elem.html(text);
+				} else {
+					$elem.html($elem.attr('data-en'));
+				}
+			} else {
+				$elem.text(text);
+			}
+		});
+		
+		// 切换lang-en和lang-zh类的显示/隐藏
+		if (lang === 'en') {
+			$('.lang-en').show();
+			$('.lang-zh').hide();
+		} else {
+			$('.lang-en').hide();
+			$('.lang-zh').show();
+		}
+	}
+	
+	// 页面加载时应用保存的语言设置
+	switchLanguage(currentLang);
+	
+	// 语言切换按钮点击事件
+	$('#lang-toggle').click(function(e) {
+		e.preventDefault();
+		var newLang = currentLang === 'en' ? 'zh' : 'en';
+		switchLanguage(newLang);
+	});
 </script>
 <!-- [if lt IE 7 ]>
 	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
