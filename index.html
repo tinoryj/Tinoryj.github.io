@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<title> Yanjing Ren@CSE.CUHK</title>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato" />
 	<link rel="stylesheet" href="css/foundation.css" />
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/animate.css" />
@@ -23,6 +23,9 @@
 		}
 		#lang-toggle i {
 			margin-right: 3px;
+		}
+		.is-hidden {
+			display: none;
 		}
 	</style>
 </head>
@@ -63,16 +66,22 @@
 	<div class="medium-3 columns">
 		<div class="text-center show-for-medium-up">
 			<img src="img/RenYanjing.jpg" class="avator has-tip tip-left"
+			     alt="Yanjing Ren"
+			     title="Yanjing Ren"
 			     data-tooltip aria-haspopup="true"
 			/>
 		</div>
 	</div>
 </div>
 
-<div class="row middle-box animated fadeIn">
-	<ul class="tabs" data-tab role="tablist">
+<div class="row middle-box animated fadeIn" id="top-nav-box">
+	<button id="mobile-tabs-toggle" class="mobile-tabs-toggle" aria-label="Toggle navigation menu" aria-controls="top-tabs" aria-expanded="false">
+		<i class="fa fa-bars" aria-hidden="true"></i>
+		<span data-en="Menu" data-zh="菜单">Menu</span>
+	</button>
+	<ul class="tabs" data-tab id="top-tabs">
 		<li class="tab-title active"><a href="#biography" data-en="Biography" data-zh="个人简介">Biography</a></li>
-		<li class="tab-title"><a href="#publication" data-en="Publication" data-zh="学术论文">Publication</a></li>
+		<li class="tab-title"><a href="#publication" data-en="Publication" data-zh="学术成果">Publication</a></li>
 		<li class="tab-title"><a href="#teaching" data-en="Teaching" data-zh="教学经历">Teaching</a></li>
 		<li class="tab-title"><a href="#software" data-en="Software" data-zh="开源软件">Software</a></li>
 		<li class="tab-title"><a href="#honor" data-en="Honors" data-zh="荣誉奖项">Honors</a></li>
@@ -90,10 +99,10 @@
 			<div class="content active animated fadeIn" id="biography">
 	<h3 data-en="Biography" data-zh="个人简介">Biography</h3>
 	<p class="lang-en">
-	Yanjing Ren is a PhD student in the <a href="http://www.cse.cuhk.edu.hk" target="_blank">Department of Computer Science and Engineering</a> at <a href="http://www.cuhk.edu.hk" target="_blank">the Chinese University of Hong Kong (CUHK)</a>, under the supervision of <a href="http://www.cse.cuhk.edu.hk/~pclee" target="_blank">Prof. Patrick P. C. Lee</a>. He is also a member of the <a href="http://adslab.cse.cuhk.edu.hk" target="_black">Applied Distributed Systems Lab (ADSLab)</a> at CUHK. Before that, He received his M.S degree in Computer Science and Engineering from <a href="https://en.uestc.edu.cn/" target="_blank">University of Electronic Science and Technology of China (UESTC)</a> in 2022, where he worked with <a href="https://jingwei87.github.io/" target="_blank">Prof. Jingwei Li</a> at the Network Security Technology Lab (NTSL), which Prof. Xiaosong Zhang leads. In addition, He received his Bachelor's degree in Information Security from <a href="https://en.uestc.edu.cn/" target="_blank">University of Electronic Science and Technology of China (UESTC)</a> in 2019.
+	Yanjing Ren is a PhD student in the <a href="http://www.cse.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">Department of Computer Science and Engineering</a> at <a href="http://www.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">the Chinese University of Hong Kong (CUHK)</a>, under the supervision of <a href="http://www.cse.cuhk.edu.hk/~pclee" target="_blank" rel="noopener noreferrer">Prof. Patrick P. C. Lee</a>. He is also a member of the <a href="http://adslab.cse.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">Applied Distributed Systems Lab (ADSLab)</a> at CUHK. Before that, He received his M.S degree in Computer Science and Engineering from <a href="https://en.uestc.edu.cn/" target="_blank" rel="noopener noreferrer">University of Electronic Science and Technology of China (UESTC)</a> in 2022, where he worked with <a href="https://jingwei87.github.io/" target="_blank" rel="noopener noreferrer">Prof. Jingwei Li</a> at the Network Security Technology Lab (NTSL), which Prof. Xiaosong Zhang leads. In addition, He received his Bachelor's degree in Information Security from <a href="https://en.uestc.edu.cn/" target="_blank" rel="noopener noreferrer">University of Electronic Science and Technology of China (UESTC)</a> in 2019.
 	</p>
-	<p class="lang-zh" style="display:none;">
-	任彦璟是<a href="http://www.cuhk.edu.hk" target="_blank">香港中文大学</a><a href="http://www.cse.cuhk.edu.hk" target="_blank">计算机科学与工程系</a>博士研究生，师从<a href="http://www.cse.cuhk.edu.hk/~pclee" target="_blank">李柏晴教授（Prof. Patrick P. C. Lee）</a>。他同时也是香港中文大学<a href="http://adslab.cse.cuhk.edu.hk" target="_black">应用分布式系统实验室（ADSLab）</a>的成员。在此之前，他于2022年在<a href="https://en.uestc.edu.cn/" target="_blank">电子科技大学</a>获得计算机科学与工程硕士学位，师从<a href="https://www.math-engineering.uestc.edu.cn/lijingwei/zh_CN/index.htm" target="_blank">李经纬教授</a>，所在实验室为由张小松教授领导的网络安全技术实验室（NTSL）。此外，他于2019年在<a href="https://en.uestc.edu.cn/" target="_blank">电子科技大学</a>获得信息安全学士学位。
+	<p class="lang-zh is-hidden">
+	任彦璟是<a href="http://www.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">香港中文大学</a><a href="http://www.cse.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">计算机科学与工程系</a>博士研究生，师从<a href="http://www.cse.cuhk.edu.hk/~pclee" target="_blank" rel="noopener noreferrer">李柏晴教授（Prof. Patrick P. C. Lee）</a>。他同时也是香港中文大学<a href="http://adslab.cse.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">应用分布式系统实验室（ADSLab）</a>的成员。在此之前，他于2022年在<a href="https://en.uestc.edu.cn/" target="_blank" rel="noopener noreferrer">电子科技大学</a>获得计算机科学与工程硕士学位，师从<a href="https://www.math-engineering.uestc.edu.cn/lijingwei/zh_CN/index.htm" target="_blank" rel="noopener noreferrer">李经纬教授</a>，所在实验室为由张小松教授领导的网络安全技术实验室（NTSL）。此外，他于2019年在<a href="https://en.uestc.edu.cn/" target="_blank" rel="noopener noreferrer">电子科技大学</a>获得信息安全学士学位。
 	</p>
 </div>
 
@@ -107,7 +116,7 @@
 			<u>Yanjing Ren</u>, Jingwei Li, and Patrick P. C. Lee.<br />
 			Proceedings of the VLDB Endowment (PVLDB), Boston, MA, USA, Sep 2026.
 			<br />
-		</li><br />
+		</li>
 		<li>
 			<strong><font color=#0099ff>
 			[IISWC 2025] </font> An Analysis of Ethereum Workloads from a Key-Value Storage Perspective.
@@ -115,21 +124,21 @@
 			<u>Yanjing Ren</u>, Jia Zhao, Jingwei Li, and Patrick P. C. Lee.<br />
 			Proceedings of the 2025 IEEE International Symposium on Workload Characterization (IISWC 2025), Irvine, CA, USA, October 2025. 
 			<br />
-		</li><br />
+		</li>
 		<li>
 			<strong><font color=#0099ff>
 			[IEEE ICDCS 2025] </font> SGX-Enabled Encrypted Cross-Cloud Data Synchronization.
 			</strong><br />
 			Jia Zhao, <u>Yanjing Ren</u>, Jingwei Li, and Patrick P. C. Lee.<br />
 			Proceedings of the 45th IEEE International Conference on Distributed Computing Systems (ICDCS 2025), Glasgow, Scotland, UK, July 2025. <br />
-		</li><br />
+		</li>
 		<li>
 			<strong><font color=#0099ff>
 			[IEEE ICDE 2024] </font> Enhancing LSM-tree Key-Value Stores for Read-Modify-Writes via Key-Delta Separation.
 			</strong><br />
 			Jinhong Li, <u>Yanjing Ren</u>, Shujie Han, and Patrick P. C. Lee.<br />
 			Proceedings of the 40th IEEE International Conference on Data Engineering (ICDE 2024), Utrecht, Netherlands, May 2024. <br />
-		</li><br />
+		</li>
 		<li>
 			<strong><font color=#0099ff>
 			[USENIX FAST 2024] </font> ELECT: Enabling Erasure Coding Tiering for LSM-tree-based Storage.
@@ -137,7 +146,7 @@
 			<u>Yanjing Ren</u>, Yuanming Ren, Xiaolu Li, Yuchong Hu, Jingwei Li, and Patrick P. C. Lee.<br />
 			Proceedings of the 22nd USENIX Conference on File and Storage Technologies (FAST 2024), Santa Clara, CA, USA, February 2024. <br />
 			(AR: 22/123 = 17.9%) <br />
-		</li><br />
+		</li>
 		<li>
 			<strong><font color=#0099ff>
 			[IEEE INFOCOM 2024] </font> CDCache: Space-Efficient Flash Caching via Compression-before-Deduplication.
@@ -145,7 +154,7 @@
 			Hengying Xiao, Jingwei Li, <u>Yanjing Ren</u>, Ruijin Wang, Xiaosong Zhang.<br />
 			Proceedings of IEEE International Conference on Computer Communications (INFOCOM 2024), May 2024. <br />
 			(AR: 256/1307 = 19.6%) <br />
-		</li><br />
+		</li>
 		<li>
 			<strong><font color=#0099ff>
 			[IEEE INFOCOM 2023] </font> FeatureSpy: Detecting Learning-Content Attacks via Feature Inspection in Secure Deduplicated Storage.
@@ -153,7 +162,7 @@
 			Jingwei Li, <u>Yanjing Ren</u>, Patrick P. C. Lee, Yuyu Wang, Ting Chen, Xiaosong Zhang.<br />
 			Proceedings of IEEE International Conference on Computer Communications (INFOCOM 2023), May 2023. <br />
 			(AR: 252/1312 = 19.2%) <br />
-		</li><br />
+		</li>
 		<li>
 			<strong><font color=#0099ff>
 			[IEEE INFOCOM 2022] </font> Revisiting Frequency Analysis against Encrypted Deduplication via Statistical Distribution.
@@ -161,7 +170,7 @@
 			Jingwei Li, Guoli Wei, Jiacheng, Liang, <u>Yanjing Ren</u>, Patrick P. C. Lee and Xiaosong Zhang.<br />
 			Proceedings of IEEE International Conference on Computer Communications (INFOCOM 2022), May 2022. <br />
 			(AR: 225/1129 = 19.9%) <br />
-		</li><br />
+		</li>
 		<li>
 			<strong><font color=#0099ff>
 			[USENIX ATC 2021] </font> Accelerating Encrypted Deduplication via SGX.
@@ -169,7 +178,7 @@
 			<u>Yanjing Ren</u>, Jingwei Li, Zuoru Yang, Patrick P. C. Lee and Xiaosong Zhang.<br />
 			Proceedings of the 2021 USENIX Annual Technical Conference (USENIX ATC 2021), July 2021. <br />
 			(AR: 64/341 = 18.8%) <br />
-		</li><br />
+		</li>
 		<li>
 			<strong><font color=#0099ff>
 			[ACM EuroSys 2020] </font> Balancing storage efficiency and data confidentiality with tunable encrypted deduplication.
@@ -177,7 +186,7 @@
 			Jingwei Li, Zuoru Yang, <u>Yanjing Ren</u>, Patrick P. C. Lee and Xiaosong Zhang.<br />
 			Proceedings of the 15th European Conference on Computer Systems (EuroSys 2020), Heraklion, Crete, Greece, April 2020. <br />
 			(AR: 43/234 = 18.4%) <br />
-		</li><br />
+		</li>
 		<li>
 			<strong><font color=#0099ff>
 			[IEEE MSST 2019] </font> Metadedup: Deduplicating metadata in encrypted deduplication via indirection.
@@ -185,7 +194,7 @@
 			Jingwei Li, Patrick P. C. Lee, <u>Yanjing Ren</u>, and Xiaosong Zhang.<br />
 			Proceedings of 35th International Conference on Massive Storage Systems and Technology (MSST 2019) (Full paper), Santa Clara, CA, USA, May 2019. <br />
 			(AR: 21/71 = 29.6%) <br />
-		</li><br />
+		</li>
 	</ul>
 	<h3 data-en="Journal Papers" data-zh="期刊论文">Journal Papers</h3>
 	<ul class="bullet">
@@ -196,7 +205,7 @@
 			Zuoru Yang, Jingwei Li, <u>Yanjing Ren</u>, Patrick P. C. Lee and Xiaosong Zhang.<br />		
 			ACM Transactions on Storage (TOS), 18(4), pp. 1-38, Nov 2022. <br />
 			(An earlier version appeared in EuroSys 2020) <br />
-		</li><br />
+		</li>
 		<li>
 			<strong><font color=#97250c>
 			[IEEE TC 2021] </font> Enabling Secure and Space Efficient Metadata Management in Encrypted Deduplication.
@@ -204,52 +213,52 @@
 			Jingwei Li, Suyu Huang, <u>Yanjing Ren</u>, Patrick P. C. Lee and Xiaosong Zhang.<br />
 			IEEE Transactions on Computers (TC), 71(4), pp. 959–970, April 2022. <br />
 			(An earlier version appeared in MSST 2019) <br />
-		</li><br />
+		</li>
 	</ul>
 	<h3 data-en="Patents" data-zh="专利">Patents</h3>
 	<ul class="bullet">
 		<li>
-			<strong><font color=#009900>
-			[Authorized] </font> An encrypted cross-Cloud data synchronization method and system based on Intel SGX technology.
+			<strong><font color=#8e0b5e>
+			[Publicly] </font> An encrypted cross-Cloud data synchronization method and system based on Intel SGX technology.
 			</strong><br />
 			Jia Zhao, <u>Yanjing Ren</u>, Jingwei Li, Patrick P. C. Lee.<br />
 			CN120692085A[P], 2025.09.23 <br />
-		</li><br />
+		</li>
 		<li>
-			<strong><font color=#009900>
-			[Authorized] </font> A key-value storage method and system based on key difference separation to improve LSM tree.
+			<strong><font color=#8e0b5e>
+			[Publicly] </font> A key-value storage method and system based on key difference separation to improve LSM tree.
 			</strong><br />
 			Jinghong Li, <u>Yanjing Ren</u>, Patrick P. C. Lee.<br />
 			CN117828133A[P], 2024.04.05 <br />
-		</li><br />
+		</li>
 		<li>
 			<strong><font color=#009900>
 			[Authorized] </font> A distributed ciphertext shared key management method and system based on encrypted data deduplication.
 			</strong><br />
 			Jingwei Li, Suyu Huang, <u>Yanjing Ren</u>, Zuoru Yang, Patrick P. C. Lee.<br />
 			CN112152798B[P], 2023.10.03 <br />
-		</li><br />
+		</li>
 		<li>
 			<strong><font color=#009900>
 			[Authorized] </font> An efficient encryption deduplication method based on hardware security zone.
 			</strong><br />
 			Jingwei Li, <u>Yanjing Ren</u>, Yang Zuoru, Patrick P. C. Lee, Xiaosong Zhang.<br />
 			CN112947855B[P], 2022.10.14 <br />
-		</li><br />
+		</li>
 		<li>
 			<strong><font color=#009900>
 			[Authorized] </font> An Adjustable Encryption Deduplication Method.
 			</strong><br />
 			Jingwei Li, Zuoru Yang, <u>Yanjing Ren</u>, Patrick P. C. Lee, Xiaosong Zhang.<br />
 			CN111338572B[P], 2021.09.14 <br />
-		</li><br />
+		</li>
 		<li>
 			<strong><font color=#009900>
 			[Authorized] </font> An efficient metadata management method in an encrypted deduplication system.
 			</strong><br />
 			Jingwei Li, Patrick P. C. Lee, <u>Yanjing Ren</u>, Xiaosong Zhang.<br />
 			CN110109617B[P], 2020.05.12 <br />
-		</li><br />
+		</li>
 	</ul>
 </div>
 
@@ -261,7 +270,7 @@
 			<span class="label right" data-en="Spring 2025" data-zh="2025年春季">Spring 2025</span><br />
 			AIST 3020: Introduction to Computer Systems
 			<br />
-			<em data-en="Instructor:" data-zh="授课教师：">Instructor:</em> <a href="http://www.cse.cuhk.edu.hk/~pclee" target="_blank"> Prof. Patrick P. C. Lee</a>
+			<em data-en="Instructor:" data-zh="授课教师：">Instructor:</em> <a href="http://www.cse.cuhk.edu.hk/~pclee" target="_blank" rel="noopener noreferrer"> Prof. Patrick P. C. Lee</a>
 			<br />
 		</li>
 		<li>
@@ -269,7 +278,7 @@
 			<span class="label right" data-en="Fall 2022, Fall 2023" data-zh="2022年秋季，2023年秋季">Fall 2022, Fall 2023</span><br />
 			CSCI 4180/ESTR 4106: Introduction to Cloud Computing and Storage
 			<br />
-			<em data-en="Instructor:" data-zh="授课教师：">Instructor:</em> <a href="http://www.cse.cuhk.edu.hk/~pclee" target="_blank"> Prof. Patrick P. C. Lee</a>
+			<em data-en="Instructor:" data-zh="授课教师：">Instructor:</em> <a href="http://www.cse.cuhk.edu.hk/~pclee" target="_blank" rel="noopener noreferrer"> Prof. Patrick P. C. Lee</a>
 			<br />
 		</li>
 		<li>
@@ -277,7 +286,7 @@
 			<span class="label right" data-en="Spring 2023" data-zh="2023年春季">Spring 2023</span><br />
 			CSCI 3180: Principles of Programming Languages
 			<br />
-			<em data-en="Instructor:" data-zh="授课教师：">Instructor:</em> <a href="http://www.cse.cuhk.edu.hk/~wallace/" target="_blank"> Prof. Wallace, Wai-Ho Mak</a>
+			<em data-en="Instructor:" data-zh="授课教师：">Instructor:</em> <a href="http://www.cse.cuhk.edu.hk/~wallace/" target="_blank" rel="noopener noreferrer"> Prof. Wallace, Wai-Ho Mak</a>
 			<br />
 		</li>
 	</ul>
@@ -304,7 +313,7 @@
 			<a href="https://github.com/tinoryj/sack"> Github repo (personal)</a>
 			, <a href="https://github.com/adslabcuhk/sack"> Github repo (ADSLab)</a>
 			<span class="label success right"> VLDB'26 </span><br />
-		</li><br />
+		</li>
 		<li>
 			<strong>
 			An Analysis of Ethereum Workloads from a Key-Value Storage Perspective. &nbsp;
@@ -312,7 +321,7 @@
 			<a href="https://github.com/tinoryj/EthAnalysis"> Github repo (personal)</a>
 			, <a href="https://github.com/adslabcuhk/geth_analysis"> Github repo (ADSLab)</a>
 			<span class="label success right"> IISWC'25 </span><br />
-		</li><br />
+		</li>
 		<li>
 			<strong>
 			Enhancing LSM-tree Key-Value Stores for Read-Modify-Writes via Key-Delta Separation. &nbsp;
@@ -320,7 +329,7 @@
 			<a href="https://github.com/tinoryj/KDSep"> Github repo (personal)</a>,
 			<a href="https://github.com/adslabcuhk/kdsep"> Github repo (ADSLab)</a>
 			<span class="label success right"> ICDE'24 </span><br />
-		</li><br />
+		</li>
 		<li>
 			<strong>
 			ELECT: Enabling Erasure Coding Tiering for LSM-tree-based Storage &nbsp;
@@ -328,42 +337,43 @@
 			<a href="https://github.com/tinoryj/ELECT"> Github repo (personal)</a>
 			, <a href="https://github.com/adslabcuhk/elect"> Github repo (ADSLab)</a>
 			<span class="label success right"> FAST'24 </span><br />
-		</li><br />
+		</li>
 		<li>
 			<strong>
 			FeatureSpy: Detecting Learning-Content Attacks via Feature Inspection in Secure Deduplicated Storage. &nbsp;
 			</strong><br />
 			<a href="https://github.com/tinoryj/FeatureSpy"> Github repo</a>
 			<span class="label success right"> INFOCOM'23 </span><br />
-		</li><br />
+		</li>
 		<li>
 			<strong>
 			University of Electronic Science and Technology of China (UESTC) graduation thesis latex template. &nbsp;
 			</strong><br />
 			<a href="https://github.com/tinoryj/UESTC-Thesis-Latex-Template"> Github repo</a>
 			<span class="label success right"> UESTC'22 </span><br />
-		</li><br />
+		</li>
 		<li>
 			<strong>
 			Accelerating Encrypted Deduplication via SGX. &nbsp;
 			</strong><br />
 			<a href="https://github.com/tinoryj/SGXDedup"> Github repo</a>
 			<span class="label success right"> USENIX ATC'21 </span><br />
-		</li><br />
+		</li>
 		<li>
 			<strong>
 			Balancing storage efficiency and data confidentiality with tunable encrypted deduplication. &nbsp;
 			</strong><br />
 			<a href="https://github.com/jingwei87/ted"> Github repo</a>
 			<span class="label success right"> EuroSys'20 </span><br />
-		</li><br />
+		</li>
 		<li>
 			<strong>
 			Metadedup: Deduplicating metadata in encrypted deduplication via indirection. &nbsp;
 			</strong><br />
 			<a href="https://github.com/tinoryj/MetaDedup"> Github repo</a>
 			<span class="label success right"> MSST'19 </span><br />
-		</li><br />
+		</li>
+	</ul>
 </div>
 
 <div class="content animated fadeIn" id="honor">
@@ -429,13 +439,13 @@
 </div>
 <div class="content animated fadeIn" id="about">
 	<h3 data-en="About this page" data-zh="关于本页面">About this page</h3>
-	<p class="lang-content" data-en="This page is created with Foundation." data-zh="本页面使用 Foundation 创建。">This page is created with <a href="http://foundation.zurb.com/" target="_blank">Foundation</a>.</p>
-	<span class="label alert round" data-en="Privacy warning:" data-zh="隐私警告：">Privacy warning:</span> <span class="lang-content" data-en="This page has installed the tracking script from Google Analytics. Click here to learn how to opt out." data-zh="本页面已安装 Google Analytics 追踪脚本。点击此处了解如何退出追踪。">This page has installed the tracking script from Google Analytics. Click <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" data-en="here" data-zh="此处">here</a> to learn how to opt out.</span>
+	<p class="lang-content" data-en="This page is created with Foundation." data-zh="本页面使用 Foundation 创建。">This page is created with <a href="http://foundation.zurb.com/" target="_blank" rel="noopener noreferrer">Foundation</a>.</p>
+	<span class="label alert round" data-en="Privacy warning:" data-zh="隐私警告：">Privacy warning:</span> <span class="lang-content" data-en="This page has installed the tracking script from Google Analytics. Click here to learn how to opt out." data-zh="本页面已安装 Google Analytics 追踪脚本。点击此处了解如何退出追踪。">This page has installed the tracking script from Google Analytics. Click <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" data-en="here" data-zh="此处">here</a> to learn how to opt out.</span>
 	<br /><br />
 </div>
 		</div>
 		<div class="text-center">
-			<span class="footer" data-en="Last modified: January 21th, 2026" data-zh="最后更新：2026年1月21日"></span>
+			<span class="footer" data-en="Last modified: March 1st, 2026" data-zh="最后更新：2026年3月1日"></span>
 		</div>
 	</div>
 </div>
@@ -496,6 +506,33 @@
 		e.preventDefault();
 		var newLang = currentLang === 'en' ? 'zh' : 'en';
 		switchLanguage(newLang);
+	});
+
+	// 移动端顶部导航折叠/展开
+	var $mobileTabsToggle = $('#mobile-tabs-toggle');
+	var $topNavBox = $('#top-nav-box');
+
+	function closeMobileTabs() {
+		$topNavBox.removeClass('tabs-mobile-open');
+		$mobileTabsToggle.attr('aria-expanded', 'false');
+	}
+
+	$mobileTabsToggle.click(function() {
+		var isOpen = $topNavBox.hasClass('tabs-mobile-open');
+		$topNavBox.toggleClass('tabs-mobile-open');
+		$mobileTabsToggle.attr('aria-expanded', isOpen ? 'false' : 'true');
+	});
+
+	$('#top-tabs a').click(function() {
+		if (window.innerWidth <= 640) {
+			closeMobileTabs();
+		}
+	});
+
+	$(window).on('resize', function() {
+		if (window.innerWidth > 640) {
+			closeMobileTabs();
+		}
 	});
 </script>
 <!-- [if lt IE 7 ]>
