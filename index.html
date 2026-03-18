@@ -511,11 +511,25 @@
 	// 移动端顶部导航折叠/展开
 	var $mobileTabsToggle = $('#mobile-tabs-toggle');
 	var $topNavBox = $('#top-nav-box');
+	var $tabs = $('#top-tabs');
 
 	function closeMobileTabs() {
 		$topNavBox.removeClass('tabs-mobile-open');
 		$mobileTabsToggle.attr('aria-expanded', 'false');
 	}
+
+	function updateMobileMenuVisibility() {
+		var isMobile = window.innerWidth <= 640;
+		if (isMobile) {
+			$mobileTabsToggle.show();
+		} else {
+			$mobileTabsToggle.hide();
+			$tabs.show();
+			closeMobileTabs();
+		}
+	}
+
+	updateMobileMenuVisibility();
 
 	$mobileTabsToggle.click(function() {
 		var isOpen = $topNavBox.hasClass('tabs-mobile-open');
@@ -530,9 +544,7 @@
 	});
 
 	$(window).on('resize', function() {
-		if (window.innerWidth > 640) {
-			closeMobileTabs();
-		}
+		updateMobileMenuVisibility();
 	});
 </script>
 <!-- [if lt IE 7 ]>

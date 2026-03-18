@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-tabs-toggle {
-	display: none;
+	display: none !important;
 }
 
 .bottom-box {
@@ -149,6 +149,14 @@ img {
 		padding: 0 24px;
 	}
 
+	.mobile-tabs-toggle {
+		display: none !important;
+	}
+
+	.middle-box .tabs {
+		display: block !important;
+	}
+
 	.bottom-box {
 		padding: 10px 28px 8px;
 	}
@@ -175,6 +183,14 @@ img {
 	.middle-box {
 		padding: 0 10px;
 		overflow-x: auto;
+	}
+
+	.mobile-tabs-toggle {
+		display: none !important;
+	}
+
+	.middle-box .tabs {
+		display: block !important;
 	}
 
 	.tabs {
@@ -233,7 +249,7 @@ img {
 	}
 
 	.mobile-tabs-toggle {
-		display: flex;
+		display: flex !important;
 		align-items: center;
 		justify-content: center;
 		gap: 8px;
