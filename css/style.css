@@ -153,6 +153,65 @@ img {
 	word-break: normal;
 }
 
+.company-logo {
+	display: inline-flex;
+	align-items: center;
+	line-height: 1;
+	min-height: 24px;
+	vertical-align: middle;
+}
+
+.company-logo-img {
+	display: block;
+	width: 178px;
+	height: auto;
+}
+
+.company-logo-fallback {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		background-color: #050505;
+		color-scheme: dark;
+	}
+
+	.top-box,
+	.bottom-box {
+		background-color: rgba(24, 24, 24, 0.9);
+		color: #f2f2f2;
+	}
+
+	.top-box a,
+	.bottom-box a {
+		color: #8bd6ff;
+	}
+
+	.top-box a:hover,
+	.bottom-box a:hover {
+		color: #c7edff;
+	}
+
+	.secondary,
+	.comment {
+		color: #c8c8c8;
+	}
+
+	.footer {
+		border-top-color: #555;
+		color: #c0c0c0;
+	}
+}
+
 /* Desktop */
 @media only screen and (min-width: 1025px) {
 	body {
