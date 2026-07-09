@@ -191,6 +191,21 @@ img {
 		color: #f2f2f2;
 	}
 
+	.top-box h1,
+	.top-box h2,
+	.top-box h3,
+	.top-box h4,
+	.top-box h5,
+	.top-box h6,
+	.bottom-box h1,
+	.bottom-box h2,
+	.bottom-box h3,
+	.bottom-box h4,
+	.bottom-box h5,
+	.bottom-box h6 {
+		color: #f2f2f2;
+	}
+
 	.top-box a,
 	.bottom-box a {
 		color: #8bd6ff;
