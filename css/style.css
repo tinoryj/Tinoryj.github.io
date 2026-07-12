@@ -153,6 +153,10 @@ img {
 	word-break: normal;
 }
 
+#internship li + li {
+	margin-top: 18px;
+}
+
 .company-logo {
 	display: inline-flex;
 	align-items: center;
